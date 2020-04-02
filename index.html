@@ -8,6 +8,7 @@
   <body>
     <script src="./libraries/angular.js"></script>
     <script src="./controller.js"></script>
+    <!-- ----------------------------------- Binding and controller -->
     <!-- <div>
       <input type="text" ng-model="hello" />
       <input type="text" ng-model="hello" />
@@ -19,12 +20,22 @@
       <input type="text" ng-model="myBook" />
       {{myBook}}
     </div> -->
-    <div ng-controller="firstCtrl">
+
+    <!-- ----------------------------------- Connection between 2 controllers -->
+    <!-- <div ng-controller="firstCtrl">
       <input type="text" ng-model="myFactory.hello" />
     </div>
     <br />
     <div ng-controller="secondCtrl">
       <input type="text" ng-model="myFactory.hello" />
+    </div> -->
+
+    <!-- ----------------------------------- Methods in the controller -->
+    <div ng-controller="thirdCtrl">
+      {{hello}}
+      <button ng-click='setHello("foo")'>foo</button>
+      <button ng-click='setHello("bar")'>bar</button>
+      {{myFactory.hello()}}
     </div>
   </body>
 </html>
